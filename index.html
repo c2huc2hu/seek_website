@@ -1,0 +1,54 @@
+<html lang="en-US">
+
+<!-- 
+2016-01-12 
+Hello anyone looking at the source,
+
+This is my first website built from scratch, using HTML, JS, jQuery and CSS, because 
+I was bored and decided to learn those languages. I probably used a bunch of poor
+practices, so apologies if you have to maintain this. There might be compatibility 
+issues, I'm not sure, but it works on chrome, so I'm happy. 
+
+-c2huc2hu 
+--> 
+
+<head> <!-- Stores meta data --> 
+
+    <!-- load jQuery --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+    
+    <!-- load the header/ ribbon script --> 
+    <script>
+       // load an external file: c/o http://stackoverflow.com/questions/8988855/
+        $(function(){
+                $("#site_theme").load("site_theme.html", callback); 
+           });
+        function callback() { init(); }; 
+        // we want the init file inside site_theme, so we wait until we load the file before 
+        // using the callback. kind of hack but oh well
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="seek.css">
+</head>
+
+<title>
+    SEEK 2016
+</title> 
+
+<body>
+    <div id="site_theme"> </div>  <!-- header and ribbon --> 
+
+    <div class="body_text">
+    <p> Welcome to SEEK 2016! This website is still in development, so if you've come across this site, everything
+    will be up and running shortly </p> 
+    <!-- news goes on this page I guess --> 
+    </div>
+    
+    <!-- insert a video or some media here --> 
+    <div class="body_img" > 
+        <img src="assets/robots_are_cute.jpg" class="body_img">
+    </div> 
+</body> 
+
+
+</html> 

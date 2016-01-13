@@ -1,0 +1,73 @@
+<!-- Contains the header and the ribbon at the top --> 
+
+<script>
+    function init()
+    {
+        console.log('a');
+        // enable transitions for the drop-down menus 
+       $(".dropdown_menu").slideUp(0); 
+       $("#documents_button").click(function() {
+            $(".dropdown_menu:not(#documents_dropdown_menu)").slideUp("fast"); 
+            $("#documents_dropdown_menu").slideToggle("fast"); 
+       }); 
+       $("#past_years_button").click(function() { 
+            $(".dropdown_menu:not(#past_years_dropdown_menu)").slideUp("fast"); 
+            $("#past_years_dropdown_menu").slideToggle("fast"); 
+       }); 
+       
+       // make the menu buttons take up ~1/6 of the top width each 
+       // window.  
+        var width = $("#ribbon").width(); 
+        $(".ribbon_button").css("width", width / 6.5);
+        $('#documents_dropdown_menu').css("left", 3*width/6.5); 
+        $('#past_years_dropdown_menu').css("left", 4*width/6.5); 
+        window.onresize = function() {
+            var width = $("#ribbon").width(); 
+            
+            if (width * 6 < $('.ribbon_button').width() || $('.ribbon_button').width() < width * 7) {
+                $(".ribbon_button").css("width", width / 6.5);
+                $('#documents_dropdown_menu').css("left", 3*width/6.5); 
+                $('#past_years_dropdown_menu').css("left", 4*width/6.5); 
+            }
+            
+            if (width < 6*100) // if the screen is too narrow, stack the buttons
+            {
+                $('.ribbon_button').css("width", '100px');
+                $('.ribbon_button').css("font-size", '11px');
+            }
+        }
+    }
+</script> 
+
+<div class="page_header"> 
+    <img src="assets/logo2016_transparent.png" class="head_img">
+    <h1 style="font-size:10vh; margin-bottom:0"> SEEK </h1>
+    <h3> Space Engineering and Exploration Kompetition </h3> 
+</div> 
+
+<br>
+
+<!-- button ribbon --> 
+<div id="ribbon"> 
+    <div style="font-size:0">
+        <a href="index.html"><input type="button" class="ribbon_button" value="Home"></a>
+        <a href="about.html"><input type="button" class="ribbon_button" value="About SEEK"></a>
+        <a href="register.html"><input type="button" class="ribbon_button" value="Register"></a>
+        <input type="button" class="ribbon_button" id="documents_button" value="&#9660; Documents"></a>
+        <input type="button" class="ribbon_button" id="past_years_button" value="&#9660; Past Years"></a>
+        <a href="http://rsx-utoronto.com"><input type="button" class="ribbon_button" value="RSX Home"></a>
+    </div>
+
+    <!-- define drop down menus --> 
+    <div class="dropdown_menu" id="documents_dropdown_menu">
+        <a href="backstory.html"><input type="button" class="ribbon_button" value="Backstory"></a> <br>
+        <a href="info.html"><input type="button" class="ribbon_button" value="General Info"></a> <br> 
+        <a href="faq.html"><input type="button" class="ribbon_button" value="FAQs"></a> <br> 
+    </div>
+    
+    <div class="dropdown_menu" id="past_years_dropdown_menu">
+        <a href="seek_2015.html"><input type="button" class="ribbon_button" value="2015"></a>
+    </div>
+</div>
+
+<br>

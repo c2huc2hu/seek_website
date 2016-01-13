@@ -1,0 +1,62 @@
+/* 
+My first attempt at writing CSS, so it's pretty terrible
+*/ 
+
+* {
+    font-family:Verdana, Geneva, sans-serif; 
+}
+
+body {
+    background: #999999;
+}
+
+.page_header {
+    padding-top: 2vh;
+    padding-bottom:5vh; 
+    padding-left:5vw;
+    background:#444444;
+}
+
+.head_img {
+    width:25vh;
+    padding-top:2vh; 
+    padding-right:5vw;
+    float:right;
+}
+
+.body_text {
+    float:left;
+    padding-left:5vw; 
+    width:45vw; 
+}
+
+.body_img {
+    float:left; 
+    padding-left:2vw; 
+    width:42vw; 
+}
+
+#ribbon {
+    background:#555555; 
+    clear:both; 
+}
+
+.dropdown_menu {
+    border:5px; 
+    position:relative;
+}
+
+.ribbon_button {
+    border:0px; 
+    height:40px;
+    background:#444444;
+    font-weight:bold; 
+    font-size: 1.5vw;
+    display:inline-table
+}
+
+table tr td { /* table formatting */ 
+    padding:0.5em; 
+    padding-left:1em; 
+    padding-right:2em;
+}
