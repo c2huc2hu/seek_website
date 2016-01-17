@@ -4,17 +4,18 @@ My first attempt at writing CSS, so it's pretty terrible
 
 * {
     font-family:Verdana, Geneva, sans-serif; 
+    color: #211D21; 
 }
 
 body {
-    background: #999999;
+    background: #A58765;
 }
 
 .page_header {
     padding-top: 2vh;
     padding-bottom:5vh; 
     padding-left:5vw;
-    background:#444444;
+    background:#66533E;
 }
 
 .head_img {
@@ -26,6 +27,7 @@ body {
 
 .body_text {
     float:left;
+    left:5vw; 
     padding-left:5vw; 
     width:45vw; 
 }
@@ -37,7 +39,7 @@ body {
 }
 
 #ribbon {
-    background:#555555; 
+    background:#7F6349; 
     clear:both; 
 }
 
@@ -49,10 +51,15 @@ body {
 .ribbon_button {
     border:0px; 
     height:40px;
-    background:#444444;
+    background:#66533E;
     font-weight:bold; 
     font-size: 1.5vw;
     display:inline-table
+}
+
+.ribbon_button:hover {
+    background:#82654A; 
+    cursor:pointer; 
 }
 
 table tr td { /* table formatting */ 
