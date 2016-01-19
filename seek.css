@@ -2,20 +2,22 @@
 My first attempt at writing CSS, so it's pretty terrible
 */ 
 
+
 * {
     font-family:Verdana, Geneva, sans-serif; 
-    color: #211D21; 
-}
+    color: #EEF2F0; 
+   }
 
 body {
-    background: #A58765;
+    background: #334d5c
+;
 }
 
 .page_header {
     padding-top: 2vh;
     padding-bottom:5vh; 
     padding-left:5vw;
-    background:#66533E;
+    background:#1e5d88;
 }
 
 .head_img {
@@ -29,19 +31,19 @@ body {
     float:left;
     left:5vw; 
     padding-left:5vw; 
-    width:45vw; 
+    width:45vw;
+    padding-right:2vw
 }
 
 .body_img {
     float:left; 
-    padding-left:2vw; 
-    width:42vw; 
+    width:44vw; 
 }
 
 #ribbon {
-    background:#7F6349; 
+    background:#3A9383; 
     clear:both; 
-}
+} 
 
 .dropdown_menu {
     border:5px; 
@@ -50,15 +52,15 @@ body {
 
 .ribbon_button {
     border:0px; 
-    height:40px;
-    background:#66533E;
+    height:41px;
+    background:#3A9383;
     font-weight:bold; 
     font-size: 1.5vw;
     display:inline-table
 }
 
 .ribbon_button:hover {
-    background:#82654A; 
+    background:#238171; 
     cursor:pointer; 
 }
 
